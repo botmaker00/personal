@@ -145,19 +145,19 @@ def get_progress_bar_string(pct: float) -> str:
     p = min(max(pct, 0), 100)
 
     # har 8% pe ek naya block
-    cFull = int(p // 8)
-    cPart = int(p % 8 - 1)
+    cFull = int(p // 10)
+    cPart = int(p % 10 - 1)
 
     # full filled square
-    p_str = '▰' * cFull
+    p_str = '💦' * cFull
 
     # partial fill (square variants)
-    squares = ['▱', '◩', '◪', '◫', '◨', '◧', '▰']
+    squares = ['👌', '👉', '💦']
     if cPart >= 0:
         p_str += squares[cPart]
 
     # baaki empty squares
-    p_str += '▱' * (12 - cFull)
+    p_str += '👌' * (10 - cFull)
 
     return f"[{p_str}]"
 
